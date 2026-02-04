@@ -1,0 +1,1 @@
+import torchdef dice_score(preds, masks):    inter = ((preds > 0) & (masks > 0)).sum().float()    union = (preds > 0).sum() + (masks > 0).sum()    return (2 * inter / (union + 1e-6)).item()
