@@ -223,6 +223,7 @@ Where:
 5M-s-Brain-Tumor-Segmentation-Hackathon/
 ├── README.md
 ├── EDA for Brain Tumor.ipynb    # Exploratory Data Analysis
+├── deployment video.mp4          # Deployment video
 ├── Pipeline 1/                   # ResNet34-UNet
 │   ├── config.py
 │   ├── dataset.py
@@ -241,8 +242,7 @@ Where:
 └── assets/
     ├── 3d_visualization.png
     ├── model_prediction.jpeg
-    ├── neuroseg_webapp.jpeg
-    └── neroseg.mp4
+    └── neuroseg_webapp.jpeg
 ```
 
 ---
