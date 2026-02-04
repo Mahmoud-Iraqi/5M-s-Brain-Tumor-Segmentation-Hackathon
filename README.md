@@ -11,7 +11,7 @@
 
 *Automatic segmentation of glioma sub-regions from 3D MRI scans*
 
-[🌐 Live Demo](https://neuroseg_ai.datacraft.in.net/) • [🤗 Hugging Face](https://huggingface.co/) • [📊 Competition](https://www.kaggle.com/)
+[🌐 Live Demo](https://neuroseg_ai.datacraft.in.net/) • [🤗 Hugging Face]([https://huggingface.co/](https://huggingface.co/spaces/manarsaber11/BrainTumor)) • [📊 Competition]([https://www.kaggle.com/](https://www.kaggle.com/competitions/instant-odc-ai-hackathon/))
 
 </div>
 
