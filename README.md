@@ -11,7 +11,7 @@
 
 *Automatic segmentation of glioma sub-regions from 3D MRI scans*
 
-[🌐 Live Demo](https://neuroseg_ai.datacraft.in.net/) • [🤗 Hugging Face]([https://huggingface.co/spaces/manarsaber11/BrainTumor]) • [📊 Competition]([https://www.kaggle.com/competitions/instant-odc-ai-hackathon/])
+[🌐 Live Demo](https://neuroseg_ai.datacraft.in.net/) • [🤗 Hugging Face](https://huggingface.co/spaces/manarsaber11/BrainTumor) • [📊 Competition](https://www.kaggle.com/competitions/instant-odc-ai-hackathon/)
 
 </div>
 
@@ -70,7 +70,7 @@ Gliomas are the most common primary brain malignancies with different degrees of
 
 ## 🏗️ Architecture
 
-### Pipeline 1: ResNet34-UNet (Manual Architecture)
+### Pipeline 1: ResNet34-UNet (Pre_Trained)
 
 A custom U-Net architecture with a pretrained ResNet34 encoder for robust feature extraction.
 
@@ -99,7 +99,7 @@ SLICES_PER_PATIENT: 70
 TARGET_PATIENTS: 544
 ```
 
-### Pipeline 2: Residual U-Net 2D
+### Pipeline 2: Residual U-Net 2D (Manual Architecture)
 
 A lightweight custom residual U-Net built from scratch with skip connections and data augmentation.
 
