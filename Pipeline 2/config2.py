@@ -1,0 +1,1 @@
+import torchTRAIN_DIR = "/kaggle/input/brain-tumor-segmentation-hackathon"Config = {    "IMG_SIZE": 128,    "BATCH_SIZE": 64,    "LR": 3e-4,    "EPOCHS": 20,    "NUM_CLASSES": 4,    "IN_CHANNELS": 4,    "DEVICE": torch.device('cuda' if torch.cuda.is_available() else 'cpu'),    "NUM_WORKERS": 2,    "SLICES_PER_PATIENT": 75,    "TARGET_PATIENTS": 344}
