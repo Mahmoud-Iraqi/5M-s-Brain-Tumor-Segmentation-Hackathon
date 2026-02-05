@@ -6,13 +6,13 @@ import cv2
 from tqdm import tqdm
 from skimage import morphology
 
-from model2 import ResUNet2D
-from config2 import Config
+from model import ResNet34UNet
+from config import CFG
 
 
-DEVICE = Config["DEVICE"]
-IMG_SIZE = Config["IMG_SIZE"]
-NUM_CLASSES = Config["NUM_CLASSES"]
+DEVICE = CFG["DEVICE"]
+IMG_SIZE = CFG["IMG_SIZE"]
+NUM_CLASSES = CFG["NUM_CLASSES"]
 
 
 # -----------------------------
@@ -27,6 +27,7 @@ def brats_normalize(ch):
 
 
 def load_slice(patient_path, patient_id, slice_idx):
+    """Load and preprocess a single slice from all modalities."""
     images = []
     for mod in ["flair", "t1", "t1ce", "t2"]:
         p = os.path.join(patient_path, f"{patient_id}_{mod}.nii.gz")
@@ -76,6 +77,7 @@ def post_process_clean(pred_vol, min_size=50):
 # Inference on ONE patient
 # -----------------------------
 def infer_patient(patient_dir, model):
+    """Run inference on a single patient using the model."""
     patient_id = os.path.basename(patient_dir)
 
     seg_path = os.path.join(patient_dir, f"{patient_id}_seg.nii.gz")
@@ -145,10 +147,10 @@ def predict_patient_optimized(model, patient_dir, pid):
 # Main
 # -----------------------------
 if __name__ == "__main__":
-    MODEL_PATH = "/kaggle/input/brats-model/brats_75slices_best.pth"
+    MODEL_PATH = "/kaggle/input/brats-model/resnet34_unet_best.pth"
     PATIENT_PATH = "/kaggle/input/brain-tumor-segmentation-hackathon/BraTS2021_00000"
 
-    model = ResUNet2D(NUM_CLASSES).to(DEVICE)
+    model = ResNet34UNet(NUM_CLASSES).to(DEVICE)
     model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
 
     # Standard inference
