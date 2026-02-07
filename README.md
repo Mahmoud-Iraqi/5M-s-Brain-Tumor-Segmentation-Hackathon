@@ -19,7 +19,7 @@
 
 ## 📋 Overview
 
-This repository contains our solution for the **Brain Tumor Segmentation Challenge**, where we developed deep learning models to automatically segment glioma sub-regions from multi-parametric MRI (mpMRI) scans. Our solution achieved **89% validation accuracy** and **74% on the competition leaderboard** using the Mean Dice Coefficient metric.
+This repository contains our solution for the **Brain Tumor Segmentation Challenge**, where we developed deep learning models to automatically segment glioma sub-regions from multi-parametric MRI (mpMRI) scans. Our solution achieved **89% validation accuracy** and **76% on the competition leaderboard** using the Mean Dice Coefficient metric.
 
 ### 🎯 Challenge Description
 
@@ -40,8 +40,8 @@ Gliomas are the most common primary brain malignancies with different degrees of
 
 | Model | Architecture | Validation Accuracy | Leaderboard Score |
 |-------|-------------|---------------------|-------------------|
-| Pipeline 1 | ResNet34-UNet | **89%** | **74%** |
-| Pipeline 2 | Residual U-Net 2D | **86%** | **74%** |
+| Pipeline 1 | ResNet34-UNet | **89%** | **76%** |
+| Pipeline 2 | Residual U-Net 2D | **86%** | **76%** |
 
 </div>
 
